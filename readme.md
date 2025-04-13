@@ -1,0 +1,9 @@
+MyArrayList<T> is a dynamic array implementation. It stores elements in an internal fixed-size array and automatically resizes when needed. The key feature of this list is fast access by index and simplicity in adding elements at the end. However, inserting or removing elements from the middle requires shifting others, which is less efficient.
+
+MyLinkedList<T> is based on a chain of connected nodes, where each node contains a value and a reference to the next node. This structure is ideal for frequent insertions and deletions, especially at the beginning of the list. Unlike arrays, it doesn't require resizing and doesn't waste memory on unused capacity. However, accessing an element by index is slower, as it must traverse nodes one by one.
+
+MyStack<T> represents a stack data structure, where elements are added and removed from the end (LIFO — last in, first out). Internally, it uses MyArrayList, which makes pushing and popping efficient. Stacks are commonly used when reversing actions, parsing expressions, or tracking function calls.
+
+MyQueue<T> implements a queue, where elements are added at the end and removed from the front (FIFO — first in, first out). It is built on MyLinkedList, which allows efficient removal of the first element without shifting. Queues are useful in task scheduling, breadth-first search, and handling requests in order.
+
+MyMinHeap<T extends Comparable<T>> is a minimum heap that always keeps the smallest element at the top. It is implemented using MyArrayList and maintains the heap order through up and down heapifying. It requires elements to be comparable, which is why the type is constrained to Comparable<T>. Min-heaps are commonly used in priority queues and optimization algorithms.
